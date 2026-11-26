@@ -219,6 +219,13 @@ run 10000 ns</code></pre>
       <div class="success">
         برای مدرک اصلی، یک اسکرین‌شات خوانا از <code>shadow_dmem[60:78]</code> به همراه نام تست و زمان <code>10000 ns</code> کافی است. اگر محدوده کامل در یک تصویر جا نشد، آن را در دو تصویر متوالی ثبت کنید؛ همچنان فقط یک بار شبیه‌سازی اجرا می‌شود.
       </div>
+      <h3>خروجی گرفتن در قالب فایل متنی</h3>
+      <p>پس از پایان اجرای <code>10000 ns</code>، فایل <code>dump_one_shot.do</code> را کنار پروژه قرار دهید و در Transcript بنویسید:</p>
+      <pre><code>do dump_one_shot.do</code></pre>
+      <p>فایل <code>one_shot_results.txt</code> در پوشه کاری ModelSim ساخته می‌شود. این فایل شامل نتایج اصلی <code>shadow_dmem[60:78]</code> و Snapshot تمام رجیسترهای <code>r0</code> تا <code>r31</code> است.</p>
+      <div class="note">
+        اگر در فایل خروجی عبارت <code>ERROR</code> دیده شد، مسیر دو آرایه در پروژه شما متفاوت است. مسیر واقعی را از پنجره Objects بردارید و مقادیر <code>DMEM</code> و <code>REGFILE</code> در ابتدای فایل <code>dump_one_shot.do</code> اصلاح کنید.
+      </div>
     </section>
 
     <section class="card">
